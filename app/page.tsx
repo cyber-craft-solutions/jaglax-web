@@ -41,7 +41,7 @@ export default function Home() {
           measure.
         </p>
       </div>
-      <div className="px-7 pb-[30px] flex flex-col gap-3">
+      <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
         <Image
           src={main_one}
           width={300}
@@ -82,7 +82,7 @@ export default function Home() {
           meaning of blissful escapism.
         </p>
       </div>
-      <div className="px-7 pb-[30px] flex flex-col gap-3">
+      <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
         <Image
           src={main_four}
           width={300}
