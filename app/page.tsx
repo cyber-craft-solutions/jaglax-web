@@ -1,5 +1,8 @@
 import { Logo } from "@/assets/Icons";
 import Header from "@/shared/Header";
+import localFont from 'next/font/local'
+
+const breadley = localFont({ src: '../assets/fonts/breadleysans-regular.ttf'})
 
 export default function Home() {
   return (
@@ -15,6 +18,9 @@ export default function Home() {
       </div>
       <div className="z-10 relative flex justify-center items-center h-screen">
         <Logo />
+      </div>
+      <div className="py-10 px-7 flex justify-center">
+        <h1 className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}>Welcome to Koala by Jaglax Homes!</h1>
       </div>
     </main>
   );

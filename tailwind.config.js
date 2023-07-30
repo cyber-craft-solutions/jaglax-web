@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'nunito': ['Nunito Sans', 'sans-serif']
+        'nunito': ['Nunito Sans', 'sans-serif'],
+        'breadley': ['Breadley Sans', 'sans-serif'] 
       },
       colors: {
         beige: {
