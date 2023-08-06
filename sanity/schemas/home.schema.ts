@@ -37,8 +37,8 @@ const Home = {
       type: "text",
     },
     {
-      name: "intoImages",
-      title: "Intorduction Images",
+      name: "introImages",
+      title: "Intro Images",
       type: "array",
       of: [{ type: "image", options: { hotspot: true } }],
     },

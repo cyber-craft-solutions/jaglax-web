@@ -1,11 +1,62 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
+import localFont from "next/font/local";
+import { fetchHome } from "@/sanity/api/home.api";
 
-const Intro = () => {
+const breadley = localFont({
+  src: "../../assets/fonts/breadleysans-regular.ttf",
+});
+
+const Intro = async () => {
+  const data = await fetchHome();
   return (
     <div>
-      
+      <div className="py-10 px-7 flex justify-center">
+        <h1
+          className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
+        >
+          {data.introTitle}
+        </h1>
+      </div>
+      <div className="px-7 pb-10 flex justify-center">
+        <p className="text-center">{data.introContent}</p>
+      </div>
+      <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
+        {data.introImages.map((img: any, i: any) => {
+          return (
+            <Image
+              key={i}
+              src={img.url}
+              width={300}
+              height={300}
+              alt="main_one"
+              className="object-cover w-[300px] h-[300px]"
+            />
+          );
+        })}
+      </div>
+      <div className="px-7 pb-10 flex justify-center">
+        <p className="text-center">{data.aboutContentOne}</p>
+      </div>
+      <div className="px-7 pb-10 flex justify-center">
+        <p className="text-center">{data.aboutContentTwo}</p>
+      </div>
+      <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
+        {data.infoImages.map((img: any, i: any) => {
+          return (
+            <Image
+              key={i}
+              src={img.url}
+              width={300}
+              height={300}
+              alt="main_one"
+              className="object-cover w-[300px] h-[300px]"
+            />
+          );
+        })}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;
