@@ -8,24 +8,20 @@ import main_three from "../assets/images/main_3.jpg";
 import main_four from "../assets/images/main_4.jpg";
 import main_five from "../assets/images/main_5.jpg";
 import main_six from "../assets/images/main_6.jpg";
+import Hero from "./components/Hero";
+import { fetchHome } from "@/sanity/api/home.api";
 
 const breadley = localFont({ src: "../assets/fonts/breadleysans-regular.ttf" });
 
-export default function Home() {
+export default async function Home() {
+
+  // const home = await fetchHome();
   return (
     <main className="relative">
       <div className="z-10 absolute w-full">
         <Header type="light" />
       </div>
-      <div className="w-full height-full">
-        <div className="overlay"></div>
-        <video autoPlay loop muted>
-          <source src="/home-bg.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="z-10 relative flex justify-center items-center h-screen">
-        <Logo />
-      </div>
+      <Hero />
       <div className="py-10 px-7 flex justify-center">
         <h1
           className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
@@ -44,17 +40,13 @@ export default function Home() {
       <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
         <Image
           src={main_one}
-          width={300}
-          height={300}
           alt="main_one"
-          className="object-cover"
+          className="object-cover w-[300px] h-auto"
         />
         <Image
           src={main_two}
-          width={300}
-          height={300}
           alt="main_one"
-          className="object-cover"
+          className="object-cover w-[300px] h-auto"
         />
         <Image
           src={main_three}

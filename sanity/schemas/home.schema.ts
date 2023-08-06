@@ -1,6 +1,7 @@
 const Home = {
   name: "home",
   title: "Home",
+  readonly: true,
   type: "document",
   fields: [
     {
@@ -15,9 +16,47 @@ const Home = {
       option: { source: "name" },
     },
     {
-      name: "url",
-      title: "URL",
-      type: "url",
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "metaTags",
+      title: "Meta Tags",
+      type: "array",
+      of: [{ type: "string" }],
+    },
+    {
+      name: "introTitle",
+      title: "Intorduction Title",
+      type: "string",
+    },
+    {
+      name: "introContent",
+      title: "Intorduction Content",
+      type: "text",
+    },
+    {
+      name: "intoImages",
+      title: "Intorduction Images",
+      type: "array",
+      of: [{ type: "image", options: { hotspot: true } }],
+    },
+    {
+      name: "aboutContentOne",
+      title: "About Content One",
+      type: "text",
+    },
+    {
+      name: "aboutContentTwo",
+      title: "About Content Two",
+      type: "text",
+    },
+    {
+      name: "infoImages",
+      title: "Info Images",
+      type: "array",
+      of: [{ type: "image", options: { hotspot: true } }],
     },
   ],
 };
