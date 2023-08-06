@@ -8,7 +8,7 @@ const Hero = () => {
       <video autoPlay loop muted>
         <source src="/home-bg.mp4" type="video/mp4" />
       </video>
-      <div className="z-10 relative flex justify-center items-center h-screen">
+      <div className="z-[2] relative flex justify-center items-center h-screen">
         <Logo />
       </div>
     </div>

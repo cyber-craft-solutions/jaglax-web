@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { fetchHome } from "@/sanity/api/home.api";
+import Text from "@/shared/Text";
 
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
@@ -12,14 +13,14 @@ const Intro = async () => {
   return (
     <div>
       <div className="py-10 px-7 flex justify-center">
-        <h1
+        <Text
           className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
         >
           {data.introTitle}
-        </h1>
+        </Text>
       </div>
       <div className="px-7 pb-10 flex justify-center">
-        <p className="text-center">{data.introContent}</p>
+        <Text className="text-center">{data.introContent}</Text>
       </div>
       <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
         {data.introImages.map((img: any, i: any) => {
@@ -36,10 +37,10 @@ const Intro = async () => {
         })}
       </div>
       <div className="px-7 pb-10 flex justify-center">
-        <p className="text-center">{data.aboutContentOne}</p>
+        <Text className="text-center">{data.aboutContentOne}</Text>
       </div>
       <div className="px-7 pb-10 flex justify-center">
-        <p className="text-center">{data.aboutContentTwo}</p>
+        <Text className="text-center">{data.aboutContentTwo}</Text>
       </div>
       <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
         {data.infoImages.map((img: any, i: any) => {

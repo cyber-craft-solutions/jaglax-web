@@ -1,9 +1,9 @@
 import React from "react";
 
 type Text = {
-  type: string;
+  type?: string;
   children: string | JSX.Element | JSX.Element[];
-  className: string;
+  className?: string;
 };
 
 const Text = ({ type, children, className }: Text) => {
