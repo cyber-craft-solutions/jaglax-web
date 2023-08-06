@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 video {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,4 +27,20 @@ video {
     rgba(34, 31, 31, 0.8) 0%,
     rgba(34, 31, 31, 0.22) 100%
   );
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
