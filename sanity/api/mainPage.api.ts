@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity";
 
-export async function fetchHome() {
+export async function fetchMainPage() {
   const client = createClient({
     projectId: "wx0q3a19",
     apiVersion: "2023-07-30",
@@ -9,22 +9,17 @@ export async function fetchHome() {
   });
 
   return client.fetch(
-    groq`*[_type=="home"][0]{
+    groq`*[_type=="mainPage"][0]{
       _id,
       _createdAt,
       name,
       metaTags,
       slug,
       introTitle,
-      introContent,
-      "introImages": introImages[] {
+      "mainImages": mainImages[] {
         "url": asset->url
       },
-      aboutContentOne,
-      aboutContentTwo,
-      "infoImages": infoImages[] {
-        "url": asset->url
-      }
+      mainDescription,
     }`
   );
 }

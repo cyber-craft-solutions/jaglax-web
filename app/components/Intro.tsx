@@ -16,7 +16,7 @@ const Intro = async () => {
         <Text
           className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
         >
-          {data.introTitle}
+          {data.Title}
         </Text>
       </div>
       <div className="px-7 pb-10 flex justify-center">

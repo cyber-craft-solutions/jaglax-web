@@ -301,3 +301,22 @@ export const Mail = () => {
     </svg>
   );
 };
+
+export const RightArrow = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+    >
+      <path
+        d="M5 12L10 7L5 2"
+        stroke="#221F1F"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

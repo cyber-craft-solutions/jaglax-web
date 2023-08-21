@@ -40,7 +40,7 @@ export default function ContactUs() {
             </span>
             <Text>+91 76665 96567</Text>
           </div>
-          <div>
+          <div className="flex gap-3 justify-start">
             <span>
               <Mail />
             </span>
