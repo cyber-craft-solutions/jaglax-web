@@ -3,9 +3,9 @@ import localFont from "next/font/local";
 import Header from "@/shared/Header";
 import Text from "@/shared/Text";
 
-const breadley = localFont({
-  src: "../../assets/fonts/breadleysans-regular.ttf",
-});
+// const breadley = localFont({
+//   src: "../../assets/fonts/breadleysans-regular.ttf",
+// });
 
 export function IndividualVilla() {
   return (
@@ -13,7 +13,7 @@ export function IndividualVilla() {
       <Header type="dark" />
       <div className="pt-20 pb-12 px-7 flex justify-center">
         <Text
-          className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
+          className={`text-[32px] leading-[35px] text-center uppercase`}
         >
           Marsierra
         </Text>
