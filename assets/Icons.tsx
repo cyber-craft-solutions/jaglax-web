@@ -302,7 +302,7 @@ export const Mail = () => {
   );
 };
 
-export const RightArrow = () => {
+export const RightArrow = ({ className }: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -310,6 +310,7 @@ export const RightArrow = () => {
       height="14"
       viewBox="0 0 14 14"
       fill="none"
+      className={className}
     >
       <path
         d="M5 12L10 7L5 2"

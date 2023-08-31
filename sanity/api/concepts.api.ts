@@ -19,6 +19,9 @@ export async function fetchConcepts() {
       "conceptImages": conceptImages[] {
         "url": asset->url
       },
+      "conceptImages1": conceptImages1[] {
+        "url": asset->url
+      },
       "conceptImagesFirst": conceptImagesFirst[] {
         "url": asset->url
       },

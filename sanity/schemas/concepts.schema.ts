@@ -38,6 +38,12 @@ const Concepts = {
       of: [{ type: "image", options: { hotspot: true } }],
     },
     {
+      name: "conceptImages1",
+      title: "Concept Images1",
+      type: "array",
+      of: [{ type: "image", options: { hotspot: true } }],
+    },
+    {
       name: "conceptContent",
       title: "Intorduction Content",
       type: "text",

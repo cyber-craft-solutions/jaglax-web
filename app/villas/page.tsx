@@ -28,8 +28,10 @@ import appartment_5 from "../../assets/images/Apartment5.jpg";
 import appartment_6 from "../../assets/images/Apartment6.jpg";
 import appartment_7 from "../../assets/images/Apartment7.jpg";
 import appartment_8 from "../../assets/images/Apartment8.jpg";
+import swimming_pool from "../../assets/images/swimming_pool .png";
 import Footer from "@/shared/Footer";
 import { fetchMainPage } from "@/sanity/api/mainPage.api";
+import IndividualVilla from "../individual-villa/page";
 
 const Villa = () => {
   const [responseData, setResponseData] = useState<any>();
@@ -144,6 +146,35 @@ const Villa = () => {
       amount: "₹ 25000/ month*",
     },
   ];
+
+  const IndividualCardContents = [
+    {
+      id: 1,
+      image: swimming_pool,
+      text: "Private Pool",
+    },
+    {
+      id: 2,
+      image: swimming_pool,
+      text: "Housekeeping",
+    },
+    {
+      id: 3,
+      image: swimming_pool,
+      text: "Sofa cum bed",
+    },
+    {
+      id: 4,
+      image: swimming_pool,
+      text: "3 Bedrooms and Ensuite Bathrooms",
+    },
+    {
+      id: 5,
+      image: swimming_pool,
+      text: "Terrace Garden & Deck",
+    },
+  ];
+
   const data = fetchMainPage().then((res) => setResponseData(res));
 
   return (
@@ -211,6 +242,7 @@ const Villa = () => {
           ))}
         </div>
       )}
+      {/* <IndividualVilla IndividualCardContents={IndividualCardContents} /> */}
       <div className="mt-9">
         <Footer />
       </div>
