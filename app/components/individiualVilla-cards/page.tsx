@@ -1,5 +1,5 @@
 import React from "react";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import Header from "@/shared/Header";
 import Text from "@/shared/Text";
 
