@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <main className="relative">
       <Header type="light" />
-      {/* <Hero />
+      <Hero />
       <Intro />
-      <Footer /> */}
+      <Footer />
       {/* <Concepts /> */}
-      <Villa />
+      {/* <Villa /> */}
     </main>
   );
 }

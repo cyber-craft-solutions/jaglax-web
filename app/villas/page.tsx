@@ -203,10 +203,10 @@ const Villa = () => {
         </div>
       ) : (
         <div className="flex justify-center flex-wrap">
-          {marierraApartments?.map((apartmentDetails) => (
+          {marierraApartments?.map((apartmentDetails, i) => (
             <ImageCard
               villaDetails={apartmentDetails}
-              key={apartmentDetails?.id}
+              key={i}
             />
           ))}
         </div>
