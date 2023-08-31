@@ -16,13 +16,13 @@ const Intro = async () => {
         <Text
           className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
         >
-          {data.Title}
+          {data?.introTitle}
         </Text>
       </div>
       <div className="px-7 pb-10 flex justify-center">
-        <Text className="text-center">{data.introContent}</Text>
+        <Text className="text-center md:w-[65%]">{data.introContent}</Text>
       </div>
-      <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
+      <div className="px-7 pb-[30px] flex flex-col md:flex-row items-center gap-3 justify-center">
         {data.introImages.map((img: any, i: any) => {
           return (
             <Image
@@ -37,12 +37,12 @@ const Intro = async () => {
         })}
       </div>
       <div className="px-7 pb-10 flex justify-center">
-        <Text className="text-center">{data.aboutContentOne}</Text>
+        <Text className="text-center md:w-[65%]">{data.aboutContentOne}</Text>
       </div>
       <div className="px-7 pb-10 flex justify-center">
-        <Text className="text-center">{data.aboutContentTwo}</Text>
+        <Text className="text-center md:w-[65%]">{data.aboutContentTwo}</Text>
       </div>
-      <div className="px-7 pb-[30px] flex flex-col items-center gap-3">
+      <div className="px-7 pb-[30px] flex flex-col md:flex-row items-center gap-3 justify-center">
         {data.infoImages.map((img: any, i: any) => {
           return (
             <Image

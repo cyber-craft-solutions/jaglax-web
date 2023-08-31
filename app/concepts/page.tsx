@@ -30,58 +30,88 @@ const Concepts = async () => {
           {data?.conceptTitle}
         </Text>
       </div>
-      <div className="px-7 flex flex-col items-center gap-6">
-        {data.conceptImages.map((img: any, i: any) => {
-          return (
-            <Image
-              key={i}
-              src={img.url}
-              width={300}
-              height={300}
-              alt="oncepts_main"
-              className="object-cover w-[300px] h-[300px]"
-            />
-          );
-        })}
-        <Text className=" text-center">{data?.conceptContent}</Text>
-        {data.conceptImagesFirst.map((img: any, i: any) => {
-          return (
-            <Image
-              key={i}
-              src={img.url}
-              width={300}
-              height={300}
-              alt="oncepts_main"
-              className="object-cover w-[300px] h-[300px]"
-            />
-          );
-        })}
-        <Text className="text-center">{data?.conceptFirstParaText}</Text>
-        {data?.conceptImagesSecond?.map((img: any, i: any) => {
-          return (
-            <Image
-              key={i}
-              src={img.url}
-              width={300}
-              height={300}
-              alt="oncepts_main"
-              className="object-cover w-[300px] h-[300px]"
-            />
-          );
-        })}
-        <Text className=" text-center">{data?.conceptSecondParaText}</Text>
-        {data?.conceptImagesThird?.map((img: any, i: any) => {
-          return (
-            <Image
-              key={i}
-              src={img.url}
-              width={300}
-              height={300}
-              alt="oncepts_main"
-              className="object-cover w-[300px] h-[300px]"
-            />
-          );
-        })}
+      <div>
+        <div className="px-7 flex flex-col items-center gap-6 w-full">
+          {data.conceptImages.map((img: any, i: any) => {
+            return (
+              <Image
+                key={i}
+                src={img.url}
+                width={300}
+                height={300}
+                alt="oncepts_main"
+                className="object-cover md:w-[1060px] md:h-[535px]"
+              />
+            );
+          })}
+          <Text className=" text-center md:w-[75%]">
+            {data?.conceptContent}
+          </Text>
+          <div className="flex md:flex-row  flex-col items-center gap-3 justify-center">
+            <div>
+              {data.conceptImages1.map((img: any, i: any) => {
+                return (
+                  <Image
+                    key={i}
+                    src={img.url}
+                    width={300}
+                    height={300}
+                    alt="oncepts_main"
+                    className="object-cover md:w-[515px] md:h-[696px]"
+                  />
+                );
+              })}
+            </div>
+            <div className="flex flex-col gap-3">
+              {data.conceptImagesFirst.map((img: any, i: any) => {
+                return (
+                  <Image
+                    key={i}
+                    src={img.url}
+                    width={300}
+                    height={300}
+                    alt="oncepts_main"
+                    className="object-cover md:w-[533px] h-[348px]"
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <Text className="text-center md:w-[75%]">
+            {data?.conceptFirstParaText}
+          </Text>
+          <div className="flex flex-col md:flex-row items-center gap-3 justify-center">
+            {data?.conceptImagesSecond?.map((img: any, i: any) => {
+              return (
+                <Image
+                  key={i}
+                  src={img.url}
+                  width={300}
+                  height={300}
+                  alt="oncepts_main"
+                  className="object-cover md:w-[520px] md:h-[520px]"
+                />
+              );
+            })}
+          </div>
+          <Text className=" text-center md:w-[75%]">
+            {data?.conceptSecondParaText}
+          </Text>
+          <div className="flex flex-col md:flex-row items-center gap-3 justify-center">
+            {data?.conceptImagesThird?.map((img: any, i: any) => {
+              return (
+                <Image
+                  key={i}
+                  src={img.url}
+                  width={300}
+                  height={300}
+                  alt="oncepts_main"
+                  className="object-cover md:w-[520px] h-[300px]"
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
       <div className="pt-10">
         <Footer />
