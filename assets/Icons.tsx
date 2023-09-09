@@ -315,8 +315,8 @@ export const RightArrow = ({ className }: any) => {
       <path
         d="M5 12L10 7L5 2"
         stroke="#221F1F"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
