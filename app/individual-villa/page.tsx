@@ -1,3 +1,5 @@
+'use client'
+
 import localFont from "next/font/local";
 import React from "react";
 import Image from "next/image";
