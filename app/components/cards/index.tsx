@@ -17,9 +17,13 @@ type villaDetailsType = {
     image: any;
     amount: string;
   };
+  handleViewMore: any;
 };
 
-export default function ImageCard({ villaDetails }: villaDetailsType) {
+export default function ImageCard({
+  villaDetails,
+  handleViewMore,
+}: villaDetailsType) {
   return (
     <div className="rounded bg-[#f5f4f4] w-fit p-3 mt-10">
       <Image src={villaDetails?.image} alt="villa_image" />
@@ -40,7 +44,12 @@ export default function ImageCard({ villaDetails }: villaDetailsType) {
           <Text className="text-[10px] font-medium">*exclusive of taxes</Text>
         </div>
         <div className="flex items-center gap-4 cursor-pointer">
-          <button className="text-sm font-bold">View More </button>
+          <button
+            className="text-sm font-bold"
+            onClick={() => handleViewMore(villaDetails?.villaName)}
+          >
+            View More{" "}
+          </button>
           <RightArrow />
         </div>
       </div>
