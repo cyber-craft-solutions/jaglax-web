@@ -79,7 +79,7 @@ const Villa = () => {
               View Appartments
             </p>
           </div>
-          {selectedPlace === "View Villas" ? (
+          {/* {selectedPlace === "View Villas" ? (
             <div className="flex justify-center flex-wrap">
               {marsierraVilla?.map((villaDetails) => (
                 <ImageCard
@@ -99,7 +99,7 @@ const Villa = () => {
                 />
               ))}
             </div>
-          )}
+          )} */}
         </>
       ) : selectedPlace === "View Villas" ? (
         <IndividualVilla

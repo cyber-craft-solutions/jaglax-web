@@ -1,12 +1,13 @@
 import React from "react";
 
 type Text = {
-  type?: string;
+  type?: string | string[];
   children: string | JSX.Element | JSX.Element[];
+  onClick?: () => void;
   className?: string;
 };
 
-const Text = ({ type, children, className }: Text) => {
+const Text = ({ type, children, className, onClick }: Text) => {
   if (type === "h1") {
     return <h1 className={className}>{children}</h1>;
   }
@@ -21,7 +22,9 @@ const Text = ({ type, children, className }: Text) => {
 
   return (
     <>
-      <p className={className}>{children}</p>
+      <p onClick={onClick} className={className}>
+        {children}
+      </p>
     </>
   );
 };

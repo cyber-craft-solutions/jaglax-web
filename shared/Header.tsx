@@ -14,8 +14,8 @@ const Header = ({ type = "dark" }: Header) => {
 
   if (type === "light") {
     return (
-      <header className="z-10 absolute w-full">
-        <div className="flex items-center px-7 pt-11 justify-between font-bold relative">
+      <header className="z-10 absolute w-full " >
+        <div className="flex items-center px-7 pt-11 justify-between font-bold relative container">
           <Button type={type} className="py-[10px] px-[20px]">
             Book Now
           </Button>
