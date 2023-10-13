@@ -13,8 +13,6 @@ export default function Home() {
       <Hero />
       <Intro />
       <Footer />
-      {/* <Concepts /> */}
-      {/* <Villa /> */}
     </main>
   );
 }

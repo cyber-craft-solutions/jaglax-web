@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Intro from "./intro";
 import { fetchMarselva } from "@/sanity/api/marseleva.api";
 import Link from "next/link";
+import Footer from "@/shared/Footer";
 
 const ProjectsLayout = ({ children }: any) => {
   const [project, setProject] = useState<string>("villa");
@@ -48,10 +49,11 @@ const ProjectsLayout = ({ children }: any) => {
             </p>
           </Link>
         </div>
-        <div className="flex justify-center flex-wrap items-center mt-5 gap-8">
+        <div className="flex justify-center flex-wrap items-center my-5 gap-8">
           {children}
         </div>
       </div>
+      <Footer />
     </main>
   );
 };

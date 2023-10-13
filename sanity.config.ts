@@ -6,6 +6,7 @@ import MainPage from "./sanity/schemas/mainPage.schema";
 import Contacts from "./sanity/schemas/contacts.schema";
 import Marselva from "./sanity/schemas/marselva.schema";
 import MarselvaVillas from "./sanity/schemas/marselvaVillas.schema";
+import MarselvaAppartments from "./sanity/schemas/marselvaAppartments.schema";
 
 const config = defineConfig({
   projectId: "wx0q3a19",
@@ -15,7 +16,15 @@ const config = defineConfig({
   basePath: "/admin",
   plugins: [deskTool()],
   schema: {
-    types: [Home, Concepts, MainPage, Contacts, Marselva, MarselvaVillas],
+    types: [
+      Home,
+      Concepts,
+      MainPage,
+      Contacts,
+      Marselva,
+      MarselvaVillas,
+      MarselvaAppartments,
+    ],
   },
 });
 
