@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity";
 
-export async function fetchMarselvaAppartments() {
+export async function fetchMarsierraAppartments() {
   const client = createClient({
     projectId: "wx0q3a19",
     apiVersion: "2023-07-30",
@@ -9,7 +9,7 @@ export async function fetchMarselvaAppartments() {
   });
 
   return client.fetch(
-    groq`*[_type=="marselvaAppartments"]{
+    groq`*[_type=="marsierraAppartments"]{
       _id,
       _createdAt,
       name,
@@ -39,7 +39,7 @@ export async function fetchMarselvaAppartmentById(id: string) {
   });
 
   return client.fetch(
-    groq`*[_type=="marselvaAppartments" && _id == $id][0]{
+    groq`*[_type=="marsierraAppartments" && _id == $id][0]{
       _id,
       _createdAt,
       name,

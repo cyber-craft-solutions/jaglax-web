@@ -1,8 +1,5 @@
-import IndividualVilla from "@/app/individual-villa/page";
-import {
-  fetchMarselvaVillaById,
-  fetchMarselvaVillas,
-} from "@/sanity/api/marselvaVillas.api";
+import IndividualVilla from "@/components/individual-villa/page";
+import { fetchMarsierraVillaById } from "@/sanity/api/marsierraVillas.api";
 import React from "react";
 
 type Props = {
@@ -13,7 +10,7 @@ type Props = {
 
 const Detail = async ({ params }: Props) => {
   const slug = params;
-  const data = await fetchMarselvaVillaById(slug.detail);
+  const data = await fetchMarsierraVillaById(slug.detail);
   console.log("MYIDe3e", data?.amenities);
   return (
     <IndividualVilla

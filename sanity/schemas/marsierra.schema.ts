@@ -1,6 +1,6 @@
 const Home = {
-  name: "marselva",
-  title: "Marselva",
+  name: "marsierra",
+  title: "Marsierra",
   readonly: true,
   type: "document",
   fields: [

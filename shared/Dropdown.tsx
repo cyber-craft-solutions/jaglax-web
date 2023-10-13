@@ -40,7 +40,7 @@ const Dropdown = () => {
             </Link>
 
             <Link
-              href="/villa"
+              href="/marselva/villas"
               className="p-2 pl-8 rounded-lg hover:bg-beige-200 active:bg-beige-200"
             >
               <Text>Marselva</Text>

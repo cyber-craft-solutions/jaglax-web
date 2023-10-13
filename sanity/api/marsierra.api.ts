@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity";
 
-export async function fetchMarselva() {
+export async function fetchMarsierra() {
   const client = createClient({
     projectId: "wx0q3a19",
     apiVersion: "2023-07-30",
@@ -9,7 +9,7 @@ export async function fetchMarselva() {
   });
 
   return client.fetch(
-    groq`*[_type=="marselva"][0]{
+    groq`*[_type=="marsierra"][0]{
       _id,
       _createdAt,
       title,

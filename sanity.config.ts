@@ -4,9 +4,9 @@ import Home from "./sanity/schemas/home.schema";
 import Concepts from "./sanity/schemas/concepts.schema";
 import MainPage from "./sanity/schemas/mainPage.schema";
 import Contacts from "./sanity/schemas/contacts.schema";
-import Marselva from "./sanity/schemas/marselva.schema";
-import MarselvaVillas from "./sanity/schemas/marselvaVillas.schema";
-import MarselvaAppartments from "./sanity/schemas/marselvaAppartments.schema";
+import Marsiarra from "./sanity/schemas/marsierra.schema";
+import MarsiarraVillas from "./sanity/schemas/marsierraVillas.schema";
+import MarsiarraAppartments from "./sanity/schemas/marsierraAppartments.schema";
 
 const config = defineConfig({
   projectId: "wx0q3a19",
@@ -21,9 +21,9 @@ const config = defineConfig({
       Concepts,
       MainPage,
       Contacts,
-      Marselva,
-      MarselvaVillas,
-      MarselvaAppartments,
+      Marsiarra,
+      MarsiarraVillas,
+      MarsiarraAppartments,
     ],
   },
 });

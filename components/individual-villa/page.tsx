@@ -5,10 +5,10 @@ import React from "react";
 import Image from "next/image";
 import Text from "@/shared/Text";
 import { RightArrow } from "@/assets/Icons";
-import IconTextCard from "../components/iconText-card";
+import IconTextCard from "../iconText-card";
 
 const breadley = localFont({
-  src: "../../assets/fonts/breadleysans-regular.ttf",
+  src: "../../assets/fonts/breadleysans-regular.tt",
 });
 
 const IndividualVilla = ({ amenities, name, propertyImages }: any) => {

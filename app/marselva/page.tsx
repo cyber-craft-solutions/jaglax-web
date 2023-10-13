@@ -2,9 +2,9 @@
 import Header from "@/shared/Header";
 import React, { useEffect, useState } from "react";
 import Intro from "./intro";
-import { fetchMarselva } from "@/sanity/api/marseleva.api";
 import Link from "next/link";
 import Footer from "@/shared/Footer";
+import { fetchMarsierra } from "@/sanity/api/marsierra.api";
 
 const ProjectsLayout = ({ children }: any) => {
   const [project, setProject] = useState<string>("villa");
@@ -12,7 +12,7 @@ const ProjectsLayout = ({ children }: any) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchMarselva();
+      const result = await fetchMarsierra();
       setData(result);
     };
     fetchData();
@@ -24,7 +24,7 @@ const ProjectsLayout = ({ children }: any) => {
       <Intro responseData={data} />
       <div className="container flex flex-col justify-center items-center mt-20 ">
         <div className="flex gap-4">
-          <Link href="/projects/villas">
+          <Link href="/marsierra/villas">
             <p
               className={`text-sm cursor-pointer ${
                 project === "villa"
@@ -36,7 +36,7 @@ const ProjectsLayout = ({ children }: any) => {
               View Villas
             </p>
           </Link>
-          <Link href="/projects/appartments">
+          <Link href="/marsierra/appartments">
             <p
               className={`text-sm cursor-pointer ${
                 project === "appartment"

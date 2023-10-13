@@ -2,12 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import localFont from "next/font/local";
-import Text from "../../../shared/Text";
+import Text from "../../shared/Text";
 import { RightArrow } from "@/assets/Icons";
 import Link from "next/link";
 
 const breadley = localFont({
-  src: "../../../assets/fonts/breadleysans-regular.ttf",
+  src: "../../assets/fonts/breadleysans-regular.ttf",
 });
 
 type villaDetailsType = {

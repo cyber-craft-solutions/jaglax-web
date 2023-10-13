@@ -5,10 +5,10 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import Header from "@/shared/Header";
 import Text from "@/shared/Text";
-import ImageCard from "../components/cards";
+import ImageCard from "../../components/cards";
 import Footer from "@/shared/Footer";
 import { fetchMainPage } from "@/sanity/api/mainPage.api";
-import IndividualVilla from "../individual-villa/page";
+import IndividualVilla from "../../components/individual-villa/page";
 import { marierraApartments, marsierraVilla } from "@/utils/contants";
 
 const breadley = localFont({

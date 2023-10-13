@@ -5,7 +5,7 @@ import { fetchHome } from "@/sanity/api/home.api";
 import Text from "@/shared/Text";
 
 const breadley = localFont({
-  src: "../../assets/fonts/breadleysans-regular.ttf",
+  src: "../assets/fonts/breadleysans-regular.ttf",
 });
 
 const Intro = async () => {

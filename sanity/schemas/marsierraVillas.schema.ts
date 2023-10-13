@@ -1,8 +1,8 @@
 import { defineField } from "sanity";
 
 const Home = {
-  name: "marselvaVillas",
-  title: "Marselva Villas",
+  name: "marsierraVillas",
+  title: "Marsierra Villas",
   readonly: true,
   type: "document",
   fields: [
