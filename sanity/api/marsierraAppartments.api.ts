@@ -30,7 +30,7 @@ export async function fetchMarsierraAppartments() {
     }`
   );
 }
-export async function fetchMarselvaAppartmentById(id: string) {
+export async function fetchMarsierraAppartmentById(id: string) {
   const client = createClient({
     projectId: "wx0q3a19",
     apiVersion: "2023-07-30",

@@ -20,12 +20,13 @@ type villaDetailsType = {
     cardImage: any;
     amount: string;
   };
+  href: string;
 };
 
-export default function ImageCard({ villaDetails }: villaDetailsType) {
+export default function ImageCard({ villaDetails, href }: villaDetailsType) {
   return (
     <div className="rounded bg-[#f5f4f4] w-fit p-3 mt-10 shadow-xl">
-      <Link href={`/projects/villas/${villaDetails._id}`}>
+      <Link href={href}>
         <Image
           src={villaDetails?.cardImage?.url}
           alt="villa_image"

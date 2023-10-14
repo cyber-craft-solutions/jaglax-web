@@ -10,8 +10,8 @@ const Villas = async () => {
       {data?.map((villaDetails: any) => (
         <ImageCard
           villaDetails={villaDetails}
-          key={villaDetails?.id}
-          //   handleViewMore={handleViewMore}
+          key={villaDetails?._id}
+          href={`/marsierra/appartments/${villaDetails._id}`}
         />
       ))}
     </ProjectsLayout>
