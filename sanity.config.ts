@@ -5,6 +5,7 @@ import Concepts from "./sanity/schemas/concepts.schema";
 import MainPage from "./sanity/schemas/mainPage.schema";
 import Contacts from "./sanity/schemas/contacts.schema";
 import Marsiarra from "./sanity/schemas/marsierra.schema";
+import Marselva from "./sanity/schemas/marselva.schema";
 import MarsiarraVillas from "./sanity/schemas/marsierraVillas.schema";
 import MarsiarraAppartments from "./sanity/schemas/marsierraAppartments.schema";
 
@@ -22,6 +23,7 @@ const config = defineConfig({
       MainPage,
       Contacts,
       Marsiarra,
+      Marselva,
       MarsiarraVillas,
       MarsiarraAppartments,
     ],

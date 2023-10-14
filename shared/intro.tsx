@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 
 const breadley = localFont({
-  src: "../../assets/fonts/breadleysans-regular.ttf",
+  src: "../assets/fonts/breadleysans-regular.ttf",
 });
 
 export type IntroProps = {

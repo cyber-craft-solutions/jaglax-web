@@ -1,6 +1,6 @@
-const Marsierra = {
-  name: "marsierra",
-  title: "Marsierra",
+const Marselva = {
+  name: "marselva",
+  title: "Marselva",
   readonly: true,
   type: "document",
   fields: [
@@ -23,4 +23,4 @@ const Marsierra = {
   ],
 };
 
-export default Marsierra;
+export default Marselva;

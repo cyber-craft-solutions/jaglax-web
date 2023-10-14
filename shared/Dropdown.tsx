@@ -33,7 +33,7 @@ const Dropdown = () => {
         {show ? (
           <>
             <Link
-              href="marsierra/villas"
+              href="/marsierra/villas"
               className="p-2 pl-8 rounded-lg hover:bg-beige-200 active:bg-beige-200"
             >
               <Text>Marsierra</Text>
