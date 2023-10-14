@@ -16,9 +16,8 @@ export type IntroProps = {
 };
 
 const Intro = ({ responseData }: IntroProps) => {
-  console.log("object", responseData);
   return (
-    <div className="flex flex-col items-center justify-center container">
+    <div className="flex flex-col mb-8 items-center justify-center container">
       <div className="pt-20 pb-12 px-7 flex justify-center">
         <Text
           className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}

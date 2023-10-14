@@ -7,9 +7,9 @@ import Footer from "@/shared/Footer";
 import { fetchMarsierra } from "@/sanity/api/marsierra.api";
 
 const ProjectsLayout = ({ children }: any) => {
-  const [project, setProject] = useState<string>("villa");
   const [data, setData] = useState<any>(null);
-
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "";
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetchMarsierra();
@@ -17,7 +17,6 @@ const ProjectsLayout = ({ children }: any) => {
     };
     fetchData();
   }, []);
-
   return (
     <main className="relative">
       <Header type="dark" />
@@ -27,11 +26,10 @@ const ProjectsLayout = ({ children }: any) => {
           <Link href="/marsierra/villas">
             <p
               className={`text-sm cursor-pointer ${
-                project === "villa"
+                pathname === "/marsierra/villas"
                   ? "border-b-[1px] border-solid border-[#221F1F]"
                   : ""
               }`}
-              onClick={() => setProject("villa")}
             >
               View Villas
             </p>
@@ -39,11 +37,10 @@ const ProjectsLayout = ({ children }: any) => {
           <Link href="/marsierra/appartments">
             <p
               className={`text-sm cursor-pointer ${
-                project === "appartment"
+                pathname === "/marsierra/appartments"
                   ? "border-b-[1px] border-solid border-[#221F1F]"
                   : ""
               }`}
-              onClick={() => setProject("appartment")}
             >
               View Appartments
             </p>
