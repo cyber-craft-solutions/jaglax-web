@@ -23,9 +23,11 @@ const Header = ({ type = "dark" }: Header) => {
             </Button>
           </Link>
           <div className="flex items-center gap-5">
-            <span className="cursor-pointer">
-              <Call color="white" />
-            </span>
+            <Link href="/contact-us">
+              <span className="cursor-pointer">
+                <Call color="white" />
+              </span>
+            </Link>
             <span
               className="cursor-pointer"
               onClick={() => setDrop((drop) => !drop)}
