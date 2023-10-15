@@ -6,11 +6,15 @@ module.exports = {
     "./shared/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
-        'nunito': ['Nunito Sans', 'sans-serif'],
-        'breadley': ['Breadley Sans', 'sans-serif'] 
+        nunito: ["Nunito Sans", "sans-serif"],
+        breadley: ["Breadley Sans", "sans-serif"],
       },
       colors: {
         beige: {
@@ -18,7 +22,7 @@ module.exports = {
           200: "#E2DFDF",
           400: "#d1ab85",
           800: "#23180d",
-          900: '#221F1F',
+          900: "#221F1F",
         },
       },
     },

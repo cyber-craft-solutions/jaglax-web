@@ -1,3 +1,4 @@
+import { ConfigProvider } from "antd";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
@@ -25,7 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={nunito.className}>
       <body className="bg-beige-100 font-nunito text-beige-900 text-sm">
-        {children}
+        {" "}
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#000",
+              colorInfo: "#000",
+            },
+          }}
+        >
+          {children}
+        </ConfigProvider>
       </body>
     </html>
   );

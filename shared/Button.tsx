@@ -10,7 +10,9 @@ type Button = {
 const Button = ({ children, type = "dark", className }: Button) => {
   const buttonClasses = classNames(
     { "rounded-sm border border-beige-900": type === "dark" },
-    { "rounded-sm border border-white text-white": type === "light" },
+    {
+      "rounded-sm border  border-white text-white": type === "light",
+    },
     className
   );
 
