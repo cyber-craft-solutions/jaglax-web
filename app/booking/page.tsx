@@ -143,7 +143,7 @@ const Booking = () => {
               label="Properties"
               rules={[{ required: true, message: "Please select a property" }]}
             >
-              <Select virtual={false}>
+              <Select className="bg-transparent" virtual={false}>
                 <OptGroup label="Marselva properties">
                   {data?.marselvaVillas?.map((el: any, index: string) => (
                     <Option key={index} value={el?.value}>
@@ -167,7 +167,7 @@ const Booking = () => {
                 { required: true, message: "Start and End date are required" },
               ]}
             >
-              <RangePicker />
+              <RangePicker className="bg-transparent" />
             </Form.Item>
             <Form.Item
               name="guestCount"
