@@ -7,7 +7,7 @@ const Dropdown = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="absolute shadow-md top-28 left-0 right-0 mx-7 bg-beige-100 max-w-[450px] ">
+    <div className="absolute shadow-md top-28 right-0 mx-7 bg-beige-100 max-w-[450px] z-50">
       <div className="py-4 px-2 flex flex-col gap-2 text-xs font-normal">
         <Link
           href="/"
@@ -22,7 +22,7 @@ const Dropdown = () => {
           <Text>Concepts</Text>
         </Link>
         <div
-          className="p-2 rounded-lg flex items-center justify-between hover:bg-beige-200 active:bg-beige-200"
+          className="p-2 rounded-lg flex items-center gap-9 justify-between hover:bg-beige-200 active:bg-beige-200"
           onClick={() => setShow(!show)}
         >
           <Text>Rent a Jaglax Home</Text>

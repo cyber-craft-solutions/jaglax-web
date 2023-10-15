@@ -13,34 +13,17 @@ const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
 });
 export const SidebarContext = createContext<any>("");
-const IndividualVilla = ({
-  id,
-  amenities,
-  name,
-  propertyImages,
-  type,
-  propertyType,
-}: any) => {
+const IndividualVilla = ({ amenities, name, propertyImages }: any) => {
   const [propertyData, setPropertyData] = useState<any>();
   return (
     <>
       <SidebarContext.Provider value={{ propertyData }}>
-        <Header propertyId={id} />
+        <Header />
         <div className=" mx-8 my-8 lg:mx-[190px]">
           <div className="pt-20 pb-12 px-7 flex justify-center items-center gap-5">
             {/* <RightArrow className="rotate-180 cursor-pointer" /> */}
             <Text
               className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
-              onClick={() =>
-                setPropertyData({
-                  id,
-                  amenities,
-                  name,
-                  propertyImages,
-                  type,
-                  propertyType,
-                })
-              }
             >
               {name}
             </Text>

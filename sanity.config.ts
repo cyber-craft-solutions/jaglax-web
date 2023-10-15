@@ -8,6 +8,7 @@ import Marsiarra from "./sanity/schemas/marsierra.schema";
 import Marselva from "./sanity/schemas/marselva.schema";
 import MarsiarraVillas from "./sanity/schemas/marsierraVillas.schema";
 import MarsiarraAppartments from "./sanity/schemas/marsierraAppartments.schema";
+import MarselvaVillas from "./sanity/schemas/marselvaVillas.schema";
 
 const config = defineConfig({
   projectId: "wx0q3a19",
@@ -26,6 +27,7 @@ const config = defineConfig({
       Marselva,
       MarsiarraVillas,
       MarsiarraAppartments,
+      MarselvaVillas,
     ],
   },
 });

@@ -14,6 +14,9 @@ export async function fetchMarsierraProperties() {
     },
     "villas": *[_type == "marsierraVillas"] {
       name
+    },
+    "marselvaVillas": *[_type == "marselvaVillas"] {
+      name
     }
   }`;
 
@@ -24,6 +27,12 @@ export async function fetchMarsierraProperties() {
   const villasNames = response.villas.map((item: any) => {
     return { label: item.name, value: item.name };
   });
+  const marselvaVillas = response.marselvaVillas.map((item: any) => {
+    return { label: item.name, value: item.name };
+  });
 
-  return [...appartmentsNames, ...villasNames];
+  return {
+    marsierra: [...appartmentsNames, ...villasNames],
+    marselvaVillas: marselvaVillas,
+  };
 }
