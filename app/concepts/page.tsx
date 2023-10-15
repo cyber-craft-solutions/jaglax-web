@@ -2,15 +2,6 @@ import Header from "@/shared/Header";
 import localFont from "next/font/local";
 import Text from "@/shared/Text";
 import Image from "next/image";
-
-import concepts_main from "../../assets/images/concepts_main.jpg";
-import concepts_1 from "../../assets/images/concepts_1.jpg";
-import concepts_2 from "../../assets/images/concepts_2.jpg";
-import concepts_3 from "../../assets/images/concepts_3.jpg";
-import concepts_4 from "../../assets/images/concepts_4.jpg";
-import concepts_5 from "../../assets/images/concepts_5.jpg";
-import concepts_6 from "../../assets/images/concepts_6.jpg";
-import concepts_7 from "../../assets/images/concepts_7.jpg";
 import Footer from "@/shared/Footer";
 import { fetchConcepts } from "@/sanity/api/concepts.api";
 

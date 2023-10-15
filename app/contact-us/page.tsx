@@ -4,12 +4,15 @@ import Header from "@/shared/Header";
 import localFont from "next/font/local";
 import { Phone, Navigation, Mail } from "@/assets/Icons";
 import Footer from "@/shared/Footer";
+import { fetchContactUs } from "@/sanity/api/contactUs.api";
 
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
 });
 
-export default function ContactUs() {
+export default async function ContactUs () {
+  const data = await fetchContactUs();
+
   return (
     <div>
       <Header type="dark" />
@@ -20,8 +23,7 @@ export default function ContactUs() {
           Contact Us
         </Text>
         <Text className="text-center pt-10">
-          Thank you for considering getting in touch with us! We would love to
-          hear from you and answer any questions you may have.
+          {data?.description}
         </Text>
 
         <div className="pt-[50px] pb-[120px] flex grow-1 flex-col gap-5">
@@ -30,21 +32,25 @@ export default function ContactUs() {
               <Navigation />
             </span>
             <Text>
-              448/6 Pilimbi Vaddo, Shree Ganesh Puri, Sodiem-Siolim, Bardez, Goa
-              - 403517. North Goa – 403517
+             {data?.address}
             </Text>
           </div>
           <div className="flex gap-3 justify-start">
             <span>
               <Phone />
             </span>
-            <Text>+91 76665 96567</Text>
+            {data?.contact?.map((number:string, index: number) => (
+            <Text key={index}>{number}</Text>
+            ))}
           </div>
           <div className="flex gap-3 justify-start">
             <span>
               <Mail />
             </span>
-            <Text>explore@jaglaxhomes.com</Text>
+            {data?.email?.map((email:string, index: number) => (
+            <Text key={index}>{email}</Text>
+            ))}
+        
           </div>
         </div>
       </div>
