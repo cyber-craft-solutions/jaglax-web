@@ -1,7 +1,7 @@
 "use client";
 
 import localFont from "next/font/local";
-import React from "react";
+import React, { createContext, useState } from "react";
 import Image from "next/image";
 import Text from "@/shared/Text";
 import { RightArrow } from "@/assets/Icons";
@@ -12,40 +12,60 @@ import Footer from "@/shared/Footer";
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
 });
-
-const IndividualVilla = ({ amenities, name, propertyImages }: any) => {
+export const SidebarContext = createContext<any>("");
+const IndividualVilla = ({
+  id,
+  amenities,
+  name,
+  propertyImages,
+  type,
+  propertyType,
+}: any) => {
+  const [propertyData, setPropertyData] = useState<any>();
   return (
     <>
-      <Header />
-      <div className=" mx-8 my-8 lg:mx-[190px]">
-        <div className="pt-20 pb-12 px-7 flex justify-center items-center gap-5">
-          {/* <RightArrow className="rotate-180 cursor-pointer" /> */}
-          <Text
-            className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
-          >
-            {name}
-          </Text>
+      <SidebarContext.Provider value={{ propertyData }}>
+        <Header propertyId={id} />
+        <div className=" mx-8 my-8 lg:mx-[190px]">
+          <div className="pt-20 pb-12 px-7 flex justify-center items-center gap-5">
+            {/* <RightArrow className="rotate-180 cursor-pointer" /> */}
+            <Text
+              className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
+              onClick={() =>
+                setPropertyData({
+                  id,
+                  amenities,
+                  name,
+                  propertyImages,
+                  type,
+                  propertyType,
+                })
+              }
+            >
+              {name}
+            </Text>
+          </div>
+          <div className="flex justify-center md:gap-24 gap-12 flex-wrap my-5">
+            {amenities?.map((elements: any) => (
+              <IconTextCard elements={elements} key={elements?.id} />
+            ))}
+          </div>
+          <div className=" flex justify-center flex-wrap gap-8  mt-8">
+            {propertyImages?.map((el: any) => (
+              <div key={el?.id}>
+                <Image
+                  src={el?.url}
+                  width={1200}
+                  height={1200}
+                  alt="individual-icon"
+                  className="w-[300px] h-[200px] md:w-[520px] md:h-[350px] "
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex justify-center md:gap-24 gap-12 flex-wrap my-5">
-          {amenities?.map((elements: any) => (
-            <IconTextCard elements={elements} key={elements?.id} />
-          ))}
-        </div>
-        <div className=" flex justify-center flex-wrap gap-8  mt-8">
-          {propertyImages?.map((el: any) => (
-            <div key={el?.id}>
-              <Image
-                src={el?.url}
-                width={300}
-                height={40}
-                alt="individual-icon"
-                className=" w-[520px] h-[350px] "
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-      <Footer />
+        <Footer />
+      </SidebarContext.Provider>
     </>
   );
 };

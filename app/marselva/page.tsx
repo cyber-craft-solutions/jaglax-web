@@ -22,7 +22,6 @@ const ProjectsLayout = ({ children }: any) => {
     <main className="relative">
       <Header type="dark" />
       <Intro responseData={data} />
-
       <Footer />
     </main>
   );

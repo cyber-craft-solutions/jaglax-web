@@ -14,6 +14,9 @@ const Detail = async ({ params }: Props) => {
 
   return (
     <IndividualVilla
+      propertyType="marsierra"
+      type="appartment"
+      id={data._id}
       name={data?.name}
       amenities={data?.amenities}
       propertyImages={data?.propertyImages}

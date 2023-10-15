@@ -80,8 +80,8 @@ const Intro = () => {
             <Image
               key={i}
               src={img.url}
-              width={300}
-              height={300}
+              width={1200}
+              height={1200}
               alt="main_one"
               className="object-cover w-[300px] h-[300px]"
             />

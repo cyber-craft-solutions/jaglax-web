@@ -11,9 +11,12 @@ type Props = {
 const Detail = async ({ params }: Props) => {
   const slug = params;
   const data = await fetchMarsierraVillaById(slug.detail);
-  console.log("TEST DATA", slug.detail);
+
   return (
     <IndividualVilla
+      propertyType="marsierra"
+      type="villas"
+      id={data?._id}
       name={data?.name}
       amenities={data?.amenities}
       propertyImages={data?.propertyImages}

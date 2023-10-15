@@ -6,8 +6,8 @@ const IconTextCard = ({ elements }: any) => {
     <div className="flex flex-col items-center w-[100px]">
       <Image
         src={elements?.icon}
-        width={60}
-        height={60}
+        width={1200}
+        height={1200}
         alt={elements?.text}
         className=" w-[60px] h-[60px] "
       />
