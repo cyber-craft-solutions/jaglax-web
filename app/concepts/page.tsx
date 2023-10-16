@@ -4,17 +4,18 @@ import Text from "@/shared/Text";
 import Image from "next/image";
 import Footer from "@/shared/Footer";
 import { fetchConcepts } from "@/sanity/api/concepts.api";
+import { Nunito_Sans } from "next/font/google";
 
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
 });
-
+const nunito = Nunito_Sans({ subsets: ["latin"] });
 const Concepts = async () => {
   const data = await fetchConcepts();
   return (
     <div>
       <Header type="dark" />
-      <div className="pt-20 pb-12 px-7 flex justify-center">
+      <div className="pt-20 pb-12 px-3 flex justify-center">
         <Text
           className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
         >
@@ -22,7 +23,7 @@ const Concepts = async () => {
         </Text>
       </div>
       <div>
-        <div className="px-7 flex flex-col items-center gap-6 w-full">
+        <div className="px-3 flex flex-col items-center gap-6 w-full">
           {data.conceptImages.map((img: any, i: any) => {
             return (
               <Image
@@ -31,11 +32,13 @@ const Concepts = async () => {
                 width={300}
                 height={300}
                 alt="oncepts_main"
-                className="object-cover md:w-[1060px] md:h-[535px]"
+                className="object-cover w-full h-[300px] md:w-[1060px] md:h-[535px]"
               />
             );
           })}
-          <Text className=" text-center md:w-[75%]">
+          <Text
+            className={`${nunito.className}  text-center text-lg  md:w-[75%]`}
+          >
             {data?.conceptContent}
           </Text>
           <div className="flex md:flex-row  flex-col items-center gap-3 justify-center">
@@ -48,7 +51,7 @@ const Concepts = async () => {
                     width={300}
                     height={300}
                     alt="oncepts_main"
-                    className="object-cover md:w-[515px] md:h-[696px]"
+                    className="object-cover w-full h-[300px] md:w-[515px] md:h-[696px]"
                   />
                 );
               })}
@@ -62,13 +65,15 @@ const Concepts = async () => {
                     width={300}
                     height={300}
                     alt="oncepts_main"
-                    className="object-cover md:w-[533px] h-[348px]"
+                    className="object-cover w-full h-[300px] md:w-[533px] md:h-[348px]"
                   />
                 );
               })}
             </div>
           </div>
-          <Text className="text-center md:w-[75%]">
+          <Text
+            className={`${nunito.className}  text-center text-lg  md:w-[75%]`}
+          >
             {data?.conceptFirstParaText}
           </Text>
           <div className="flex flex-col md:flex-row items-center gap-3 justify-center">
@@ -80,12 +85,14 @@ const Concepts = async () => {
                   width={300}
                   height={300}
                   alt="oncepts_main"
-                  className="object-cover md:w-[520px] md:h-[520px]"
+                  className="object-cover w-full h-[300px] md:w-[520px] md:h-[520px]"
                 />
               );
             })}
           </div>
-          <Text className=" text-center md:w-[75%]">
+          <Text
+            className={`${nunito.className}  text-center text-lg  md:w-[75%]`}
+          >
             {data?.conceptSecondParaText}
           </Text>
           <div className="flex flex-col md:flex-row items-center gap-3 justify-center">
@@ -97,7 +104,7 @@ const Concepts = async () => {
                   width={300}
                   height={300}
                   alt="oncepts_main"
-                  className="object-cover md:w-[520px] h-[300px]"
+                  className="object-cover w-full h-[300px] md:w-[520px] md:h-[300px]"
                 />
               );
             })}

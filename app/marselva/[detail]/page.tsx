@@ -18,6 +18,7 @@ const Detail = async ({ params }: Props) => {
       name={data?.name}
       amenities={data?.amenities}
       propertyImages={data?.propertyImages}
+      href="/marselva"
     />
   );
 };

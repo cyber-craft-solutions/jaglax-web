@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Text from "../../shared/Text";
 import { RightArrow } from "@/assets/Icons";
 import Link from "next/link";
+import { Nunito_Sans } from "next/font/google";
 
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
@@ -22,7 +23,7 @@ type villaDetailsType = {
   };
   href: string;
 };
-
+const nunito = Nunito_Sans({ subsets: ["latin"] });
 export default function ImageCard({ villaDetails, href }: villaDetailsType) {
   return (
     <div className="rounded bg-[#f5f4f4] w-fit p-3 mt-10 shadow-xl">
@@ -39,22 +40,28 @@ export default function ImageCard({ villaDetails, href }: villaDetailsType) {
           {villaDetails?.name}
         </Text>
         <div className="flex gap-2 items-center">
-          <p className="text-sm font-normal py-2">
+          <p className={`${nunito.className} text-sm font-normal py-2`}>
             Upto {villaDetails?.guestCount} Guests
           </p>
           <p className="text-sm font-normal py-2">|</p>
-          <p className="text-sm font-normal py-2">{villaDetails?.rooms}BHK</p>
+          <p className={`${nunito.className} text-sm font-normal py-2`}>
+            {villaDetails?.rooms}BHK
+          </p>
         </div>
         <hr className="border-[#221F1F] border-solid opacity-50" />
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-base font-semibold pt-2">
-              ₹ {villaDetails?.amount} / month*
+            <p className={`${nunito.className} text-base font-semibold pt-2`}>
+              ₹ {villaDetails?.amount} / night*
             </p>
-            <Text className="text-[10px] font-medium">*exclusive of taxes</Text>
+            <Text className={`${nunito.className} text-[10px] font-medium`}>
+              *exclusive of taxes
+            </Text>
           </div>
           <div className="flex items-center gap-4 cursor-pointer">
-            <button className="text-sm font-bold">View More </button>
+            <button className={`${nunito.className} text-sm font-bold`}>
+              View More{" "}
+            </button>
             <RightArrow />
           </div>
         </div>

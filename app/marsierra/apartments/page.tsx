@@ -11,7 +11,7 @@ const Appartments = async () => {
         <ImageCard
           villaDetails={details}
           key={details?.id}
-          href={`/marsierra/appartments/${details._id}`}
+          href={`/marsierra/apartments/${details._id}`}
         />
       ))}
     </ProjectsLayout>

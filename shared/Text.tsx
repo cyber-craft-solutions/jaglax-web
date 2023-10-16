@@ -1,7 +1,7 @@
 import React from "react";
 
 type Text = {
-  type?: string | string[];
+  type?: any;
   children: string | JSX.Element | JSX.Element[];
   onClick?: () => void;
   className?: string;

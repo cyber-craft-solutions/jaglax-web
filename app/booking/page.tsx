@@ -144,7 +144,7 @@ const Booking = () => {
               rules={[{ required: true, message: "Please select a property" }]}
             >
               <Select className="bg-transparent" virtual={false}>
-                <OptGroup label="Marselva properties">
+                <OptGroup label="Mar Selva properties">
                   {data?.marselvaVillas?.map((el: any, index: string) => (
                     <Option key={index} value={el?.value}>
                       {el?.label}

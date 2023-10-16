@@ -8,20 +8,23 @@ import { RightArrow } from "@/assets/Icons";
 import IconTextCard from "../iconText-card";
 import Header from "@/shared/Header";
 import Footer from "@/shared/Footer";
+import Link from "next/link";
 
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
 });
 export const SidebarContext = createContext<any>("");
-const IndividualVilla = ({ amenities, name, propertyImages }: any) => {
+const IndividualVilla = ({ amenities, name, propertyImages, href }: any) => {
   const [propertyData, setPropertyData] = useState<any>();
   return (
     <>
       <SidebarContext.Provider value={{ propertyData }}>
         <Header />
-        <div className=" mx-8 my-8 lg:mx-[190px]">
-          <div className="pt-20 pb-12 px-7 flex justify-center items-center gap-5">
-            {/* <RightArrow className="rotate-180 cursor-pointer" /> */}
+        <div className=" mx-3 my-8 lg:mx-[190px]">
+          <div className="pt-20 pb-12 px-3 flex justify-center items-center gap-5">
+            <Link href={href}>
+              <RightArrow className="rotate-180 cursor-pointer mt-2" />
+            </Link>
             <Text
               className={`${breadley.className} text-[32px] leading-[35px] text-center uppercase`}
             >
@@ -41,7 +44,7 @@ const IndividualVilla = ({ amenities, name, propertyImages }: any) => {
                   width={1200}
                   height={1200}
                   alt="individual-icon"
-                  className="w-[300px] h-[200px] md:w-[520px] md:h-[350px] "
+                  className="w-full h-[250px] md:w-[520px] md:h-[350px] "
                 />
               </div>
             ))}
