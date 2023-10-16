@@ -5,6 +5,9 @@ import Intro from "../../shared/intro";
 import Link from "next/link";
 import Footer from "@/shared/Footer";
 import { fetchMarsierra } from "@/sanity/api/marsierra.api";
+import { Nunito_Sans } from "next/font/google";
+
+const nunito = Nunito_Sans({ subsets: ["latin"] });
 
 const ProjectsLayout = ({ children }: any) => {
   const [data, setData] = useState<any>(null);
@@ -25,7 +28,7 @@ const ProjectsLayout = ({ children }: any) => {
         <div className="flex gap-4">
           <Link href="/marsierra/villas">
             <p
-              className={`text-sm cursor-pointer ${
+              className={`text-sm cursor-pointer ${nunito.className} ${
                 pathname === "/marsierra/villas"
                   ? "border-b-[1px] border-solid border-[#221F1F]"
                   : ""
@@ -34,15 +37,15 @@ const ProjectsLayout = ({ children }: any) => {
               View Villas
             </p>
           </Link>
-          <Link href="/marsierra/appartments">
+          <Link href="/marsierra/apartments">
             <p
-              className={`text-sm cursor-pointer ${
-                pathname === "/marsierra/appartments"
+              className={`text-sm cursor-pointer  ${nunito.className} ${
+                pathname === "/marsierra/apartments"
                   ? "border-b-[1px] border-solid border-[#221F1F]"
                   : ""
               }`}
             >
-              View Appartments
+              View Apartments
             </p>
           </Link>
         </div>

@@ -5,12 +5,13 @@ import localFont from "next/font/local";
 import { Phone, Navigation, Mail } from "@/assets/Icons";
 import Footer from "@/shared/Footer";
 import { fetchContactUs } from "@/sanity/api/contactUs.api";
+import { Nunito_Sans } from "next/font/google";
 
 const breadley = localFont({
   src: "../../assets/fonts/breadleysans-regular.ttf",
 });
-
-export default async function ContactUs () {
+const nunito = Nunito_Sans({ subsets: ["latin"] });
+export default async function ContactUs() {
   const data = await fetchContactUs();
 
   return (
@@ -22,35 +23,46 @@ export default async function ContactUs () {
         >
           Contact Us
         </Text>
-        <Text className="text-center pt-10">
+        <Text className={`${nunito.className} text-lg text-center pt-10`}>
           {data?.description}
         </Text>
 
-        <div className="pt-[50px] pb-[120px] flex grow-1 flex-col gap-5">
-          <div className="flex gap-3 justify-center">
+        <div
+          className={`${nunito.className} pt-[50px] pb-[120px] flex grow-1 flex-col  gap-5`}
+        >
+          <div className="flex gap-3 justify-center items-center">
             <span className="mt-1">
               <Navigation />
             </span>
-            <Text>
-             {data?.address}
-            </Text>
+            <Text className="text-lg">{data?.address}</Text>
           </div>
-          <div className="flex gap-3 justify-start">
+          <div className="flex gap-3 justify-start items-center">
             <span>
               <Phone />
             </span>
-            {data?.contact?.map((number:string, index: number) => (
-            <Text key={index}>{number}</Text>
+            {data?.contact?.map((number: string, index: number) => (
+              <>
+                <a href={`tel:${number}`}>
+                  <Text className="text-lg" key={index}>
+                    {data?.email?.length === index ? number : number + ","}
+                  </Text>
+                </a>
+              </>
             ))}
           </div>
-          <div className="flex gap-3 justify-start">
+          <div className="flex gap-3 justify-start items-center">
             <span>
               <Mail />
             </span>
-            {data?.email?.map((email:string, index: number) => (
-            <Text key={index}>{email}</Text>
+            {data?.email?.map((email: string, index: number) => (
+              <>
+                <a href={`mailto:${email}`}>
+                  <Text className="text-lg" key={index}>
+                    {data?.email?.length - 1 === index ? email : email + ","}
+                  </Text>
+                </a>
+              </>
             ))}
-        
           </div>
         </div>
       </div>
