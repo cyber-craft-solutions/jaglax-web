@@ -44,7 +44,7 @@ const IndividualVilla = ({ amenities, name, propertyImages, href }: any) => {
                   width={1200}
                   height={1200}
                   alt="individual-icon"
-                  className="w-full h-[250px] md:w-[520px] md:h-[350px] "
+                  className="w-[400px] h-[250px] md:w-[520px] md:h-[350px] "
                 />
               </div>
             ))}
